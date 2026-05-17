@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | TISZTA Organic</title>
+    <meta name="description"
+        content="Explore our range of 100% pure organic products, including our flagship High Protein Organic Atta.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            background-color: var(--clr-dark-green);
+            color: var(--clr-text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            height: 250px;
+            background-color: var(--clr-cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            color: var(--clr-dark-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--clr-text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .product-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .coming-soon {
+            opacity: 0.7;
+            position: relative;
+        }
+
+        .coming-soon::after {
+            content: "Coming Soon";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            background-color: var(--clr-accent-yellow);
+            color: var(--clr-dark-green);
+            padding: 5px 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 2px solid var(--clr-dark-green);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/C3w9jsRR/Whats-App-Image-2026-05-17-at-2-00-52-AM.jpg" alt="TISZTA Organic Logo" class="logo-img">
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="products.html" class="btn btn-primary nav-cta">Shop Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header fade-in">
+            <div class="container">
+                <h1 class="italic-serif">Our Organic Products</h1>
+                <p>Pure, chemical-free, and directly from trusted farmers.</p>
+            </div>
+        </header>
+
+        <section class="container fade-in">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/7x3NG3sJ/Whats-App-Image-2026-05-16-at-4-46-40-PM.jpg" alt="High Protein Organic Atta" style="max-height: 90%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">High Protein Organic Atta</h3>
+                        <p class="small-text" style="margin-bottom: 10px;">A multi-grain blend designed to maximize
+                            protein intake naturally. Rich in fiber.</p>
+                        <div class="product-price">₹450 / 5kg</div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 (Placeholder) -->
+                <div class="product-card coming-soon">
+                    <div class="product-image">
+                        <i class="fa-solid fa-jar text-green" style="font-size: 5rem;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic Cold-Pressed Oil</h3>
+                        <p class="small-text" style="margin-bottom: 10px;">100% pure cold-pressed cooking oil retaining
+                            natural nutrients.</p>
+                        <div class="product-price">₹--- / 1L</div>
+                        <button class="btn btn-outline" disabled>View Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 (Placeholder) -->
+                <div class="product-card coming-soon">
+                    <div class="product-image">
+                        <i class="fa-solid fa-bowl-rice text-green" style="font-size: 5rem;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic Unpolished Pulses</h3>
+                        <p class="small-text" style="margin-bottom: 10px;">Farm-fresh pulses without artificial
+                            polishing or colors.</p>
+                        <div class="product-price">₹--- / 1kg</div>
+                        <button class="btn btn-outline" disabled>View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark-green text-light">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo text-yellow">
+                        <img src="https://i.ibb.co/C3w9jsRR/Whats-App-Image-2026-05-17-at-2-00-52-AM.jpg" alt="TISZTA Organic Logo" class="logo-img">
+                    </a>
+                    <p>From Soil to Soul – 100% Pure Organic Living.<br>
+                        Providing clean, nutritious, and chemical-free food for healthier families.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/tiszta_organic" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:tisztaorganic@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://wa.me/919721922425" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="text-light">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-promise">
+                    <h4 class="text-light">Our Promise</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-circle text-yellow"></i> 100% Chemical-Free Farming</li>
+                        <li><i class="fa-solid fa-circle text-yellow"></i> Direct From Farmers</li>
+                        <li><i class="fa-solid fa-circle text-yellow"></i> No Preservatives, No Adulteration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TISZTA Organic. All rights reserved.</p>
+                <p>Pure Organic Living</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <a href="https://wa.me/919721922425" target="_blank" class="floating-chat" aria-label="Chat with us">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat with us</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
